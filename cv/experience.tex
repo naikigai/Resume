@@ -17,10 +17,18 @@
     {Hyderabad, India} % Location
     {Nov 2023 -  Present} % Date(s)
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Identified and replaced vulnerable query APIs usage and improved app security and guided teammates to do the same task}
-        \item {Added Integration test cases which made the app more reliable and stable}
-        \item {Catch new bugs }
+     \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Designed and implemented a large-scale CMDB denormalization pipeline in ServiceNow (ITOM Patterns plugin) using a producer-consumer architecture over an async event queue, processing millions of CI records across 17 cloud tables to pre-populate Service Account and Logical Datacenter references — eliminating expensive multi-hop \texttt{cmdb\_rel\_ci} joins for downstream teams.}
+        \item {Resolved an escalated P2 production incident within 24 hours by debugging complex customer-side CPG provisioning customizations; chaired merge review meetings for Cloud Provisioning and Governance (CPG) features; and owned the Cloud Accelerate Daily Scrum through H2 2024.}
+        \item {Built a fault-tolerant scheduled batch job system in ServiceNow with concurrency control (single-job gatekeeper), stale job auto-cancellation, windowed pagination (100K records/window), incremental processing via \texttt{last\_processed\_time}, and domain-separation-aware field protection — ensuring safe, resumable, large-scale data backfill with zero risk of duplicate execution.}
+        \item {AI-Accelerated Development: Integrated Claude Code and Devin into daily engineering workflows for unit test generation, automated code reviews, and boilerplate generation — reducing cycle time on feature delivery and consistently maintaining high test coverage across core modules.}
+        \item {Security Infrastructure \& Governance: Executed a platform-wide security initiative to identify and remediate vulnerable query APIs and duplicate ACLs, enforcing strict read-only attributes on 27 critical fields across 8 Cloud Account Management tables.}
+        \item {Engineering Excellence \& Test Coverage: Engineered a comprehensive suite of integration and unit tests using the NowUnit framework, increasing application reliability and achieving 100\% code coverage for core cloud utility modules.}
+        \item {Unit Test Modernization: Led a high-impact technical debt reduction project by migrating legacy test suites from PowerMockito to Mockito, ensuring long-term maintainability and performance of the testing infrastructure.}
+        \item {Internationalization: Refactored hardcoded UI strings into centralized translation keys across Service Portal widgets to meet multi-language requirements for the Australia release.}
+        \item {Full-Stack UI Development: Developed visual stage indicators and real-time progress trackers for cloud provisioning flows using Service Portal widgets and Flow Designer, significantly improving user visibility into complex automated operations.}
+        \item {Cloud Account Automation: Optimized Cloud Account Management (CAM) workflows by automating monthly budget population and enforcing "Run as User" security policies to mitigate privilege escalation risks during account creation.}
+        \item {Directed a critical library migration (codehaus.jackson to fasterxml, JSONUtil2) to resolve technical debt and eliminate known security vulnerabilities.}
       \end{cvitems}
     }
 
@@ -31,8 +39,8 @@
     {June 2022 - Nov 2023} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Worked on open source payments switch https://github.com/juspay/hyperswitch }
-        \item {Implemented automatic retries and API locking for the project. API locking helps the  Application handle concurrency issues and retries improves the success rate on payments by 2 percent.}
+        \item {Worked on open source payments switch \href{https://github.com/juspay/hyperswitch}{Hyperswitch} (\href{https://github.com/juspay/hyperswitch/pulls?q=is\%3Apr+author\%3AAbhicodes-crypto+is\%3Aclosed}{My PRs}).}
+        \item {Implemented automatic retries and \href{https://github.com/juspay/hyperswitch/pull/1898}{API locking} for the project. API locking helps the Application handle concurrency issues and retries improves the success rate on payments by 2 percent.}
         \item {Implemented stripe compatibility layer. It helps merchants who have already integrated stripe to easily integrate hyperswitch by just changing base url and Auth key. }
         \item {Integrating the router and the drainer which removes the Database from the crucial path of the system. Created the types system for KV. This project improved the perf by 200 RPS.}
         \item {Managed the Node SDK of hyperswitch. At a crucial moment used the stripe Node Sdk and created a Node sdk for hyperswitch in half an hour. }

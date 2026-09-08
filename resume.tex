@@ -7,6 +7,13 @@
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
+% Required for clickable links
+% The 'russell' document class loads the 'hyperref' package by default with options
+% that hide link coloring. We use \hypersetup to override these settings.
+% Define a dark blue color and set it for URLs
+\definecolor{darkblue}{HTML}{00008B}
+\hypersetup{colorlinks=true, urlcolor=darkblue}
+
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
